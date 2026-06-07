@@ -62,8 +62,8 @@ const RankedProductCard = ({ product: p }: { product: RankedProduct }) => {
             <p className="font-body text-sm text-muted-foreground">{p.tagline}</p>
           </div>
           {p.image && !p.winner && (
-            <div className="hidden shrink-0 sm:block">
-              <img src={p.image} alt={p.name} className="h-20 w-20 rounded-xl object-contain bg-secondary/60 p-1" loading="lazy" />
+            <div className="shrink-0">
+              <img src={p.image} alt={p.name} className="h-16 w-16 rounded-xl object-contain bg-secondary/60 p-1 sm:h-20 sm:w-20" loading="lazy" />
             </div>
           )}
           {p.score && (
