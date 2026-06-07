@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ---- Base surface (light/editorial) ---- */
+    --background: 240 33% 99%;
+    --foreground: 242 45% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 242 45% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 242 45% 12%;
+
+    /* JAAFIT deep navy #14124b */
+    --primary: 242 61% 18%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 30% 96%;
+    --secondary-foreground: 242 45% 16%;
+
+    --muted: 240 24% 95%;
+    --muted-foreground: 240 10% 42%;
+
+    /* accent = electric blue #4685ed */
+    --accent: 217 82% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 22% 90%;
+    --input: 240 22% 90%;
+    --ring: 217 82% 60%;
+
+    --radius: 0.9rem;
+
+    /* ---- Brand tokens ---- */
+    --navy: 242 61% 18%;          /* #14124b */
+    --navy-deep: 244 64% 11%;     /* darker base for gradients */
+    --brand-green: 120 96% 68%;   /* #62fc61 */
+    --brand-green-soft: 96 90% 67%; /* #8ef959 */
+    --brand-purple: 234 81% 69%;  /* #707cf0 */
+    --brand-blue: 217 82% 60%;    /* #4685ed */
+
+    --editorial: 240 30% 97%;
+    --editorial-border: 240 22% 90%;
+    --winner-badge: 120 70% 45%;
+    --winner-badge-foreground: 242 61% 12%;
+    --rating-star: 42 100% 55%;
+
+    --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+    --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 0.98;
+  }
+  ::selection {
+    background: hsl(var(--brand-blue) / 0.25);
+  }
+}
+
+@layer components {
+  /* ---- Layout containers ---- */
+  .container-narrow {
+    @apply mx-auto w-full max-w-3xl px-5 sm:px-6;
+  }
+  .container-page {
+    @apply mx-auto w-full max-w-5xl px-5 sm:px-6;
+  }
+  .container-wide {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6;
+  }
+  /* legacy aliases used by older markup */
+  .editorial-container {
+    @apply mx-auto w-full max-w-3xl px-5 sm:px-6;
+  }
+  .editorial-wide {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6;
+  }
+
+  .eyebrow {
+    @apply font-body text-xs font-bold uppercase tracking-[0.22em];
+  }
+
+  /* ---- Gradient text ---- */
+  .text-gradient {
+    background-image: linear-gradient(100deg, #4685ed 0%, #707cf0 45%, #62fc61 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* ---- Buttons ---- */
+  .btn-gradient {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-body text-sm font-bold uppercase tracking-wider text-white transition-all duration-300;
+    background-image: linear-gradient(100deg, #4685ed 0%, #707cf0 100%);
+    box-shadow: 0 10px 30px -8px hsl(var(--brand-blue) / 0.6);
+  }
+  .btn-gradient:hover {
+    box-shadow: 0 16px 40px -8px hsl(var(--brand-purple) / 0.7);
+    transform: translateY(-2px);
+  }
+  .btn-green {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-body text-sm font-bold uppercase tracking-wider transition-all duration-300;
+    color: hsl(var(--navy));
+    background-image: linear-gradient(100deg, #8ef959 0%, #62fc61 100%);
+    box-shadow: 0 10px 30px -8px hsl(var(--brand-green) / 0.6);
+  }
+  .btn-green:hover {
+    box-shadow: 0 16px 44px -8px hsl(var(--brand-green) / 0.85);
+    transform: translateY(-2px);
+  }
+  .btn-outline-navy {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 px-7 py-3 font-body text-sm font-bold uppercase tracking-wider transition-all duration-300;
+    border-color: hsl(var(--navy) / 0.18);
+    color: hsl(var(--navy));
+  }
+  .btn-outline-navy:hover {
+    border-color: hsl(var(--brand-blue));
+    color: hsl(var(--brand-blue));
+  }
+
+  /* ---- Cards ---- */
+  .premium-card {
+    @apply rounded-2xl border bg-card transition-all duration-300;
+    border-color: hsl(var(--editorial-border));
+    box-shadow: 0 1px 2px hsl(var(--navy) / 0.04), 0 12px 40px -24px hsl(var(--navy) / 0.25);
+  }
+  .premium-card:hover {
+    box-shadow: 0 1px 2px hsl(var(--navy) / 0.04), 0 24px 60px -28px hsl(var(--navy) / 0.4);
+    transform: translateY(-3px);
+  }
+  .glass {
+    background: hsl(0 0% 100% / 0.05);
+    border: 1px solid hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(12px);
+    @apply rounded-2xl;
+  }
+
+  /* ---- Dark navy section base ---- */
+  .section-navy {
+    position: relative;
+    background:
+      radial-gradient(120% 80% at 15% -10%, hsl(var(--brand-blue) / 0.20), transparent 55%),
+      radial-gradient(120% 90% at 95% 0%, hsl(var(--brand-purple) / 0.18), transparent 50%),
+      linear-gradient(180deg, hsl(var(--navy)) 0%, hsl(var(--navy-deep)) 100%);
+    color: #fff;
+    overflow: hidden;
+  }
+  .section-navy h1, .section-navy h2, .section-navy h3 { color: #fff; }
+
+  .grid-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(hsl(0 0% 100% / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(75% 60% at 50% 30%, #000 0%, transparent 80%);
+    mask-image: radial-gradient(75% 60% at 50% 30%, #000 0%, transparent 80%);
+    pointer-events: none;
+  }
+
+  .rank-glow {
+    position: relative;
+  }
+  .rank-glow::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 1.1rem;
+    padding: 2px;
+    background: linear-gradient(120deg, #4685ed, #707cf0, #62fc61);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .divider-gradient {
+    height: 3px;
+    width: 64px;
+    border-radius: 999px;
+    background: linear-gradient(100deg, #4685ed, #707cf0, #62fc61);
+  }
+}
+
+@layer utilities {
+  .animate-rise {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes rise {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-floaty { animation: floaty 6s ease-in-out infinite; }
+
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+}
