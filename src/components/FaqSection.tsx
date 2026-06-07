@@ -22,7 +22,7 @@ const defaultFaqs: Faq[] = [
   },
   {
     q: "Er JAAFIT PRO pengene værd?",
-    a: "Fra 999 kr. erstatter JAAFIT PRO udstyr til flere tusind kroner. App, programmer og kostplan (samlet værdi over 1.300 kr.) er inkluderet. Du har desuden 30 dages tilfredshedsgaranti.",
+    a: "Fra 799 kr. erstatter JAAFIT PRO udstyr til flere tusind kroner. App, programmer og kostplan (samlet værdi over 1.300 kr.) er inkluderet. Du har desuden 30 dages tilfredshedsgaranti.",
   },
   {
     q: "Hvor meget fylder sættet?",

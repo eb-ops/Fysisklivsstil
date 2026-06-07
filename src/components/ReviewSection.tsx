@@ -45,7 +45,7 @@ const ReviewSection = () => {
               <p className="font-body text-xs font-bold uppercase tracking-wider">Samlet værdi</p>
               <p className="font-display text-5xl leading-none">2.600+ kr.</p>
               <p className="mt-2 font-body text-sm font-semibold">
-                Din pris i dag: fra 999 kr.
+                Din pris i dag: fra 799 kr.
               </p>
             </div>
             <a

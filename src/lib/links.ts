@@ -4,6 +4,9 @@ export const LINKS = {
   jaafitPro: "https://jaafit.dk/products/jaa-fit-pro",
   jaafitProCollection:
     "https://jaafit.dk/collections/vores-losninger/products/jaa-fit-pro",
+  starterBundle: "https://jaafit.dk/products/jaafit-pro-multidor-anker-elastikbeskytter",
+  upperBodyBundle: "https://jaafit.dk/products/jaafit-pro-push-up-handles-multipunkt-doranker-elastikbeskytter",
+  fitnessBundle: "https://jaafit.dk/products/all-in-one-bundle-1",
   massageCollection: "https://jaafit.dk/collections/massageroller",
   massagePro: "https://jaafit.dk/products/massageroller-pro%E2%84%A2",
   massageMini: "https://jaafit.dk/products/massageroller-mini%E2%84%A2",

@@ -1,7 +1,37 @@
-import { Check, X } from "lucide-react";
+import { Check, X, ArrowRight } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import RankedProductCard, { RankedProduct } from "./RankedProductCard";
 import { LINKS } from "@/lib/links";
+
+const bundles = [
+  {
+    name: "Starter Bundle",
+    price: "999 kr.",
+    oldPrice: "1.427 kr.",
+    includes: ["JAAFIT PRO sæt", "Multipunkt Døranker™", "Elastik-Beskytter"],
+    link: LINKS.starterBundle,
+    highlight: false,
+    image: "https://cdn.shopify.com/s/files/1/0739/6805/8634/files/nanobanana-_nanobanana.io_-1776630042789.png",
+  },
+  {
+    name: "Upper Body Bundle",
+    price: "1.299 kr.",
+    oldPrice: "1.747 kr.",
+    includes: ["JAAFIT PRO sæt", "PowerPress™", "Multipunkt Døranker™", "Elastik-Beskytter"],
+    link: LINKS.upperBodyBundle,
+    highlight: true,
+    image: "https://cdn.shopify.com/s/files/1/0739/6805/8634/files/Bundlestorebilleder_91.jpg",
+  },
+  {
+    name: "Fitness Bundle",
+    price: "1.499 kr.",
+    oldPrice: "2.175 kr.",
+    includes: ["JAAFIT PRO sæt", "PowerPress™", "Push Up Handles", "Multipunkt Døranker™", "Elastik-Beskytter", "Sportstaske"],
+    link: LINKS.fitnessBundle,
+    highlight: false,
+    image: "https://cdn.shopify.com/s/files/1/0739/6805/8634/files/nanobanana-_nanobanana.io_-1776629465227.png",
+  },
+];
 
 const products: RankedProduct[] = [
   {
@@ -10,9 +40,10 @@ const products: RankedProduct[] = [
     tagline: "Komplet hjemmetræningssystem med app",
     rating: 4.9,
     score: 9.8,
-    price: "Fra 999 kr.",
+    price: "Fra 799 kr.",
     badge: "Redaktionens valg",
     winner: true,
+    image: "https://cdn.shopify.com/s/files/1/0739/6805/8634/files/Jaafitproduktbilleder.jpg",
     link: LINKS.jaafitPro,
     ctaLabel: "Se JAAFIT PRO",
     highlights: [
@@ -83,7 +114,7 @@ const specRows = [
   { label: "Træningsapp", values: ["check", "x", "x", "x"] },
   { label: "Transportabel", values: ["check", "x", "x", "check"] },
   { label: "Hele kroppen", values: ["check", "x", "check", "x"] },
-  { label: "Pris", values: ["Fra 999 kr.", "2.500+ kr.", "4.000+ kr.", "100+ kr."] },
+  { label: "Pris", values: ["Fra 799 kr.", "2.500+ kr.", "4.000+ kr.", "100+ kr."] },
 ];
 const specCols = ["JAAFIT PRO", "Håndvægte", "Multimaskine", "Elastikbånd"];
 
@@ -107,6 +138,63 @@ const ComparisonTable = () => {
           {products.map((p) => (
             <RankedProductCard key={p.rank} product={p} />
           ))}
+        </div>
+
+        {/* Bundle upsell */}
+        <div className="mt-14">
+          <div className="mb-6">
+            <span className="eyebrow">Spar mere med et bundle</span>
+            <h3 className="mt-2 font-display text-3xl text-navy">Vælg dit JAAFIT-bundle</h3>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-3">
+            {bundles.map((b) => (
+              <div
+                key={b.name}
+                className={`relative rounded-2xl border p-6 flex flex-col gap-4 ${
+                  b.highlight
+                    ? "border-brand-blue bg-brand-blue/5 ring-2 ring-brand-blue/30"
+                    : "border-editorial-border bg-white"
+                }`}
+              >
+                {b.highlight && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-blue px-3 py-1 font-body text-[11px] font-bold uppercase tracking-wider text-white">
+                    Mest populær
+                  </span>
+                )}
+                {b.image && (
+                  <div className="h-36 w-full overflow-hidden rounded-xl bg-secondary/50">
+                    <img src={b.image} alt={b.name} className="h-full w-full object-contain p-3" loading="lazy" />
+                  </div>
+                )}
+                <div>
+                  <p className="font-display text-xl text-navy">{b.name}</p>
+                  <div className="mt-1 flex items-baseline gap-2">
+                    <span className="font-display text-3xl text-navy">{b.price}</span>
+                    <span className="font-body text-sm text-muted-foreground line-through">{b.oldPrice}</span>
+                  </div>
+                </div>
+                <ul className="flex-1 space-y-1.5">
+                  {b.includes.map((item) => (
+                    <li key={item} className="flex items-center gap-2 font-body text-sm text-foreground/80">
+                      <Check className="h-4 w-4 shrink-0 text-winner" /> {item}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={b.link}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                  className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-body text-xs font-bold uppercase tracking-wider transition-all ${
+                    b.highlight
+                      ? "bg-navy text-white hover:bg-brand-blue"
+                      : "bg-secondary text-navy hover:bg-navy hover:text-white"
+                  }`}
+                >
+                  Se bundle <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Spec comparison table */}

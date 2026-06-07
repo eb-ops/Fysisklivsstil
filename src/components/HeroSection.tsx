@@ -64,6 +64,12 @@ const HeroSection = () => {
         <div className="relative animate-rise delay-300">
           <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-brand-blue/30 via-brand-purple/20 to-brand-green/20 blur-3xl" />
           <div className="glass relative p-6 sm:p-8 space-y-4">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0739/6805/8634/files/Jaafitproduktbilleder.jpg"
+              alt="JAAFIT PRO Trænings System"
+              className="mx-auto h-48 w-full object-contain animate-floaty"
+              loading="eager"
+            />
             <div className="flex items-center justify-between">
               <div>
                 <p className="font-display text-5xl text-white leading-none">9,8</p>
@@ -94,7 +100,7 @@ const HeroSection = () => {
             <div className="pt-2 rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 flex items-center justify-between">
               <div>
                 <p className="font-display text-2xl text-white">JAAFIT PRO</p>
-                <p className="font-body text-xs text-white/60">Fra 999 kr. · 30 dages garanti</p>
+                <p className="font-body text-xs text-white/60">Fra 799 kr. · 30 dages garanti</p>
               </div>
               <span className="rounded-full bg-brand-green px-3 py-1 font-body text-xs font-bold uppercase tracking-wider text-navy">#1 valg</span>
             </div>
