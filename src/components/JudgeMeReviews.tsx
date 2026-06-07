@@ -10,6 +10,12 @@ interface Review {
 }
 
 const REVIEWS: Review[] = [
+  { title: "Bruger det rent faktisk", body: "Endelig noget jeg rent faktisk bruger. Det fylder ingenting, og jeg træner nu 4 gange om ugen i stuen.", rating: 5, author: "Timmy K." },
+  { title: "Appen gør forskellen", body: "Appen gør hele forskellen. Jeg ved altid hvad jeg skal lave, og programmerne er nemme at følge.", rating: 5, author: "Mia S." },
+  { title: "Tog den med på ferie", body: "Tog det med i sommerhuset hele ferien. Modstanden er vild – man forstår ikke det fylder så lidt.", rating: 5, author: "Melinna K." },
+  { title: "Holder ved denne gang", body: "Har købt og opgivet så meget udstyr før. Det her er det første der holder ved. Kan kun anbefale det.", rating: 5, author: "Sofie H." },
+  { title: "Community er guld værd", body: "Community'et er guld værd. Fik svar på mine spørgsmål fra en rigtig træner inden for et par timer.", rating: 5, author: "Sanne J." },
+  { title: "Professionel kvalitet", body: "Solid kvalitet hele vejen igennem. Stålbaren føles som professionelt udstyr.", rating: 5, author: "Thomas L." },
   { title: "Partræning", body: "Min partner og jeg har begge investeret i dette hjemmetræningsudstyr, og vi elsker det! Det giver os mulighed for at træne sammen derhjemme, hvilket har styrket vores forhold og motivation. Tak for et fantastisk produkt!", rating: 5, author: "Malene Thygesen" },
   { title: "Ny motivation", body: "Jeg har altid haft svært ved at holde mig motiveret til at træne derhjemme, men dette firma har virkelig givet mig den motivation, jeg har brug for. Produktet er af høj kvalitet, og træningsprogrammet er motiverende og effektivt.", rating: 5, author: "Frederik Knudsen" },
   { title: "Perfekt til både begyndere og øvede", body: "Perfekt til både begyndere og øvede! God service, hurtig levering og produkter af høj kvalitet. Træningsvideoerne er professionelle og forklarer øvelserne rigtig godt. Alt sammen super nemt at gå til.", rating: 5, author: "Rune Kirstein Hansen" },
@@ -56,7 +62,7 @@ const JudgeMeReviews = () => {
           <SectionHeading
             eyebrow="Verificerede anmeldelser"
             title="Hvad kunderne siger"
-            subtitle={`${REVIEWS.length}+ verificerede anmeldelser fra rigtige kunder.`}
+            subtitle={`${REVIEWS.length}+ verificerede anmeldelser · 4,8/5 på Trustpilot`}
           />
           <div className="flex items-center gap-2 shrink-0">
             <button

@@ -6,7 +6,6 @@ import EditorialIntro from "@/components/EditorialIntro";
 import ComparisonTable from "@/components/ComparisonTable";
 import ReviewSection from "@/components/ReviewSection";
 import BuyingFactors from "@/components/BuyingFactors";
-import TrustSignals from "@/components/TrustSignals";
 import FaqSection from "@/components/FaqSection";
 import FinalCta from "@/components/FinalCta";
 import AuthorBox from "@/components/AuthorBox";
@@ -50,7 +49,6 @@ const Index = () => {
           subtitle="Inden du investerer i hjemmetræningsudstyr, så hold løsningerne op mod disse fem faktorer."
           factors={buyingFactors}
         />
-        <TrustSignals />
         <JudgeMeReviews />
         <FaqSection />
         <FinalCta />
