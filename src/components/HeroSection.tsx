@@ -1,5 +1,6 @@
 import { Star, Trophy, ArrowRight, Check } from "lucide-react";
 import { LINKS } from "@/lib/links";
+import TrustBar from "./TrustBar";
 
 const HeroSection = () => {
   return (
@@ -100,6 +101,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      <TrustBar />
     </section>
   );
 };

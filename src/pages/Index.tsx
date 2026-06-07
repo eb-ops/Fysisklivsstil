@@ -2,7 +2,6 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import AffiliateDisclosure from "@/components/AffiliateDisclosure";
 import HeroSection from "@/components/HeroSection";
-import TrustBar from "@/components/TrustBar";
 import EditorialIntro from "@/components/EditorialIntro";
 import ComparisonTable from "@/components/ComparisonTable";
 import ReviewSection from "@/components/ReviewSection";
@@ -44,7 +43,6 @@ const Index = () => {
       <AffiliateDisclosure />
       <main className="flex-1">
         <HeroSection />
-        <TrustBar />
         <EditorialIntro />
         <ComparisonTable />
         <ReviewSection />
