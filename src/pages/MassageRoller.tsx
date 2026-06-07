@@ -8,7 +8,7 @@ import TrustBar from "@/components/TrustBar";
 import FaqSection, { Faq } from "@/components/FaqSection";
 import FinalCta from "@/components/FinalCta";
 import AuthorBox from "@/components/AuthorBox";
-import JudgeMeCarousel from "@/components/JudgeMeCarousel";
+import JudgeMeReviews from "@/components/JudgeMeReviews";
 import StickyCtaBar from "@/components/StickyCtaBar";
 import { LINKS } from "@/lib/links";
 
@@ -265,7 +265,7 @@ const MassageRoller = () => {
           </div>
         </section>
 
-        <JudgeMeCarousel />
+        <JudgeMeReviews />
 
         <FaqSection
           faqs={faqs}

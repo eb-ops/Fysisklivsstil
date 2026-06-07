@@ -12,7 +12,7 @@ import FaqSection from "@/components/FaqSection";
 import FinalCta from "@/components/FinalCta";
 import AuthorBox from "@/components/AuthorBox";
 import StickyCtaBar from "@/components/StickyCtaBar";
-import JudgeMeCarousel from "@/components/JudgeMeCarousel";
+import JudgeMeReviews from "@/components/JudgeMeReviews";
 
 const buyingFactors = [
   {
@@ -53,7 +53,7 @@ const Index = () => {
           factors={buyingFactors}
         />
         <TrustSignals />
-        <JudgeMeCarousel />
+        <JudgeMeReviews />
         <FaqSection />
         <FinalCta />
         <section className="py-16">

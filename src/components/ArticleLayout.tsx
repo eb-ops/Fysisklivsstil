@@ -4,7 +4,7 @@ import SiteFooter from "./SiteFooter";
 import AffiliateDisclosure from "./AffiliateDisclosure";
 import StickyCtaBar from "./StickyCtaBar";
 import AuthorBox from "./AuthorBox";
-import JudgeMeCarousel from "./JudgeMeCarousel";
+import JudgeMeReviews from "./JudgeMeReviews";
 
 interface ArticleLayoutProps {
   category: string;
@@ -78,7 +78,7 @@ const ArticleLayout = ({
         </div>
       </article>
     </main>
-    <JudgeMeCarousel />
+    <JudgeMeReviews />
     <SiteFooter />
     <StickyCtaBar href={ctaHref} label="JAAFIT PRO – Testvinder 2026" />
   </div>
