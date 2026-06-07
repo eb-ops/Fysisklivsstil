@@ -26,8 +26,9 @@ const SiteHeader = () => {
       }`}
     >
       <div className="container-wide flex items-center justify-between py-3.5">
-        <Link to="/" className="flex items-center" aria-label="Fysisklivsstil forside">
-          <span className="font-display text-xl font-bold text-navy">
+        <Link to="/" className="flex items-center gap-2.5" aria-label="Fysisklivsstil forside">
+          <img src="/brand/logo-mark.svg" alt="" className="h-8 w-8" />
+          <span className="font-display text-2xl font-bold text-navy">
             Fysisklivsstil
           </span>
         </Link>

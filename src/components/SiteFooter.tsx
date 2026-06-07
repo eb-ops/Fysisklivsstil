@@ -7,8 +7,9 @@ const SiteFooter = () => (
     <div className="container-wide relative z-10 py-14">
       <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <div className="mb-4">
-            <span className="font-display text-xl font-bold text-white">Fysisklivsstil</span>
+          <div className="flex items-center gap-2.5 mb-4">
+            <img src="/brand/logo-mark.svg" alt="" className="h-8 w-8" />
+            <span className="font-display text-2xl font-bold text-white">Fysisklivsstil</span>
           </div>
           <p className="font-body text-sm leading-relaxed text-white/65 max-w-sm">
             Uafhængig redaktion for sundhed, træning og livsstil i Danmark. Vi tester
