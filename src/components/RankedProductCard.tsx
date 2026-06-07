@@ -48,19 +48,24 @@ const RankedProductCard = ({ product: p }: { product: RankedProduct }) => {
         #{p.rank} {p.badge && <span className="opacity-90">· {p.badge}</span>}
       </div>
 
-      {/* image (winner only / when provided) */}
-      {p.image && (
+      {/* image — full panel for winner, hidden on mobile non-winner */}
+      {p.image && p.winner && (
         <div className="flex items-center justify-center bg-gradient-to-br from-secondary to-white p-6 pt-12">
           <img src={p.image} alt={p.name} className="max-h-56 w-auto object-contain" loading="lazy" />
         </div>
       )}
 
-      <div className={`p-6 ${p.image ? "" : "pt-12"}`}>
+      <div className={`p-6 ${p.winner && p.image ? "" : "pt-12"}`}>
         <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
+          <div className="flex-1">
             <h3 className="font-display text-3xl text-navy">{p.name}</h3>
             <p className="font-body text-sm text-muted-foreground">{p.tagline}</p>
           </div>
+          {p.image && !p.winner && (
+            <div className="hidden shrink-0 sm:block">
+              <img src={p.image} alt={p.name} className="h-20 w-20 rounded-xl object-contain bg-secondary/60 p-1" loading="lazy" />
+            </div>
+          )}
           {p.score && (
             <div className="flex flex-col items-center rounded-xl bg-navy px-3 py-1.5 text-center text-white">
               <span className="font-display text-2xl leading-none">{p.score.toFixed(1)}</span>

@@ -65,6 +65,7 @@ const products: RankedProduct[] = [
     tagline: "Klassisk løsning til isolationsøvelser",
     rating: 3.6,
     price: "2.500–5.000 kr.",
+    image: "/images/justerbare-haandvaegt-traening.jpg",
     link: LINKS.jaafitPro,
     ctaLabel: "Se bedre valg",
     highlights: [
@@ -81,6 +82,7 @@ const products: RankedProduct[] = [
     tagline: "Stort stativ til faste øvelser",
     rating: 3.2,
     price: "4.000–12.000 kr.",
+    image: "/images/hjemme-multimaskine-styrketraening.jpg",
     link: LINKS.jaafitPro,
     ctaLabel: "Se bedre valg",
     highlights: [
@@ -97,6 +99,7 @@ const products: RankedProduct[] = [
     tagline: "Billige løse bånd uden system",
     rating: 2.4,
     price: "100–300 kr.",
+    image: "/images/standard-traeningselastikker.webp",
     link: LINKS.jaafitPro,
     ctaLabel: "Se bedre valg",
     highlights: [
