@@ -1,5 +1,4 @@
 import { Star, Trophy, ArrowRight, Check } from "lucide-react";
-import jaafitImage from "@/assets/jaafit-pro-set.png";
 import { LINKS } from "@/lib/links";
 
 const HeroSection = () => {
@@ -55,35 +54,48 @@ const HeroSection = () => {
               ))}
             </div>
             <p className="font-body text-sm text-white/70">
-              <span className="font-bold text-white">4,8/5</span> · 25.000+ danskere træner hjemme
+              <span className="font-bold text-white">4,8/5</span> · 10.000+ danskere træner hjemme
             </p>
           </div>
         </div>
 
-        {/* Product visual */}
+        {/* Stats visual */}
         <div className="relative animate-rise delay-300">
           <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-brand-blue/30 via-brand-purple/20 to-brand-green/20 blur-3xl" />
-          <div className="glass relative overflow-hidden p-4 sm:p-6">
-            <div className="absolute right-4 top-4 z-10 flex flex-col items-center rounded-2xl bg-white px-3 py-2 text-center shadow-lg">
-              <span className="font-display text-3xl leading-none text-navy">9,8</span>
-              <span className="font-body text-[9px] font-bold uppercase tracking-wider text-muted-foreground">
-                Score
-              </span>
+          <div className="glass relative p-6 sm:p-8 space-y-4">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="font-display text-5xl text-white leading-none">9,8</p>
+                <p className="font-body text-xs font-bold uppercase tracking-wider text-white/50 mt-1">Redaktionel score</p>
+              </div>
+              <div className="flex flex-col items-end gap-1">
+                <div className="flex">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-rating-star text-rating-star" />
+                  ))}
+                </div>
+                <p className="font-body text-xs text-white/60">4,8 · Trustpilot</p>
+              </div>
             </div>
-            <img
-              src={jaafitImage}
-              alt="JAAFIT PRO komplet hjemmetræningssæt med elastikker, stålbar og tilbehør"
-              className="mx-auto h-auto w-full max-h-[440px] object-contain animate-floaty"
-              loading="eager"
-            />
-            <div className="mt-2 flex items-center justify-between rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10">
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              {[
+                { label: "Max modstand", value: "145 kg" },
+                { label: "Øvelser i app", value: "50+" },
+                { label: "Kunder", value: "10.000+" },
+                { label: "Garanti", value: "30 dage" },
+              ].map((s) => (
+                <div key={s.label} className="rounded-xl bg-white/5 p-4 ring-1 ring-white/10">
+                  <p className="font-display text-2xl text-white">{s.value}</p>
+                  <p className="font-body text-[11px] text-white/50 uppercase tracking-wider mt-0.5">{s.label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="pt-2 rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/10 flex items-center justify-between">
               <div>
                 <p className="font-display text-2xl text-white">JAAFIT PRO</p>
-                <p className="font-body text-xs text-white/60">Komplet træningssystem</p>
+                <p className="font-body text-xs text-white/60">Fra 999 kr. · 30 dages garanti</p>
               </div>
-              <span className="rounded-full bg-brand-green px-3 py-1 font-body text-xs font-bold uppercase tracking-wider text-navy">
-                #1 valg
-              </span>
+              <span className="rounded-full bg-brand-green px-3 py-1 font-body text-xs font-bold uppercase tracking-wider text-navy">#1 valg</span>
             </div>
           </div>
         </div>

@@ -2,19 +2,13 @@ import { Link } from "react-router-dom";
 import { ShieldCheck } from "lucide-react";
 import { NAV, LINKS } from "@/lib/links";
 
-const logoWhite = "/brand/logo-white.png";
-
 const SiteFooter = () => (
   <footer className="section-navy">
     <div className="container-wide relative z-10 py-14">
       <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-2.5 mb-4">
-            <img src={logoWhite} alt="JAAFIT" className="h-6 w-auto" />
-            <span className="h-5 w-px bg-white/20" />
-            <span className="font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60">
-              FysiskLivsstil
-            </span>
+          <div className="mb-4">
+            <span className="font-display text-xl font-bold text-white">Fysisklivsstil</span>
           </div>
           <p className="font-body text-sm leading-relaxed text-white/65 max-w-sm">
             Uafhængig redaktion for sundhed, træning og livsstil i Danmark. Vi tester

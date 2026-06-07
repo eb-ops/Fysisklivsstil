@@ -36,7 +36,7 @@ const RankedProductCard = ({ product: p }: { product: RankedProduct }) => {
   return (
     <div
       className={`relative ${p.winner ? "rank-glow" : ""} premium-card overflow-hidden ${
-        p.winner ? "lg:grid lg:grid-cols-[260px_1fr]" : ""
+        p.winner && p.image ? "lg:grid lg:grid-cols-[260px_1fr]" : ""
       }`}
     >
       {/* rank ribbon */}

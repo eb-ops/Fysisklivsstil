@@ -1,7 +1,6 @@
 import { Check, X } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import RankedProductCard, { RankedProduct } from "./RankedProductCard";
-import jaafitImage from "@/assets/jaafit-pro-set.png";
 import { LINKS } from "@/lib/links";
 
 const products: RankedProduct[] = [
@@ -14,7 +13,6 @@ const products: RankedProduct[] = [
     price: "Fra 999 kr.",
     badge: "Redaktionens valg",
     winner: true,
-    image: jaafitImage,
     link: LINKS.jaafitPro,
     ctaLabel: "Se JAAFIT PRO",
     highlights: [

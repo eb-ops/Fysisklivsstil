@@ -3,8 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { LINKS, NAV } from "@/lib/links";
 
-const logo = "/brand/logo.png";
-
 const SiteHeader = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -28,11 +26,9 @@ const SiteHeader = () => {
       }`}
     >
       <div className="container-wide flex items-center justify-between py-3.5">
-        <Link to="/" className="flex items-center gap-2.5" aria-label="FysiskLivsstil forside">
-          <img src={logo} alt="JAAFIT" className="h-6 w-auto sm:h-7" />
-          <span className="hidden sm:block h-5 w-px bg-editorial-border" />
-          <span className="hidden sm:block font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            FysiskLivsstil
+        <Link to="/" className="flex items-center" aria-label="Fysisklivsstil forside">
+          <span className="font-display text-xl font-bold text-navy">
+            Fysisklivsstil
           </span>
         </Link>
 
