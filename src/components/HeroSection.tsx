@@ -40,7 +40,7 @@ const HeroSection = () => {
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center animate-rise delay-300">
             <a href={LINKS.jaafitPro} target="_blank" rel="noopener noreferrer sponsored" className="btn-green">
-              Se testvinderen <ArrowRight className="h-4 w-4" />
+              Oplev JAAFIT her <ArrowRight className="h-4 w-4" />
             </a>
             <a href="#sammenligning" className="inline-flex items-center gap-2 px-3 py-3 font-body text-sm font-semibold text-white/80 transition-colors hover:text-brand-green">
               Se hele sammenligningen
